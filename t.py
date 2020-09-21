@@ -4,10 +4,10 @@ import os
 import time
 
 end = datetime.datetime.now()
-start = end - datetime.timedelta(days=194)
+start = end - datetime.timedelta(days=91)
 
 def do(dt):
-    if not random.randint(0, 7):
+    if not random.randint(0, 4):
         for i in range(random.randint(0,4)):
             with open('commit.log', 'a+') as f:
                 f.write(str(dt) +'\n')
@@ -17,7 +17,7 @@ def do(dt):
 
 
 
-while start < end - datetime.timedelta(days=91):
+while start < end - datetime.timedelta(days=11):
     start = start + datetime.timedelta(days=1)
     do(start)
 
