@@ -7,8 +7,8 @@ end = datetime.datetime.now()
 start = end - datetime.timedelta(days=51)
 
 def do(dt):
-    if not random.randint(0, 3):
-        for i in range(random.randint(0, 5)):
+    if not random.randint(0, 2):
+        for i in range(random.randint(0, 2)):
             with open('commit.log', 'a+') as f:
                 f.write(str(dt) +'\n')
             os.system('git add .')
