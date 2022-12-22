@@ -4,11 +4,11 @@ import os
 import time
 
 end = datetime.datetime.now()
-start = end - datetime.timedelta(days=51)
+start = end - datetime.timedelta(days=330)
 
 def do(dt):
     if not random.randint(0, 2):
-        for i in range(random.randint(0, 2)):
+        for i in range(random.randint(0, 3)):
             with open('commit.log', 'a+') as f:
                 f.write(str(dt) +'\n')
             os.system('git add .')
@@ -17,8 +17,8 @@ def do(dt):
 
 
 
-while start < end - datetime.timedelta(days=21):
-    start = start + datetime.timedelta(days=1)
+while start < end - datetime.timedelta(days=10):
+    start = start + datetime.timedelta(days=random.randint(1, 8))
     do(start)
 
 
