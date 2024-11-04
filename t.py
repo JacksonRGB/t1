@@ -13,7 +13,7 @@ def do(dt):
                 f.write(str(dt) +'\n')
             os.system('git add .')
             print(f"{str(dt)[:-9]}{random.randint(0,59)}", i)
-            os.system(f'git commit -a -m "update" --date="{str(dt)[:-9]}{random.randint(10,59)}"')
+            os.system(f'GIT_AUTHOR_DATE="{str(dt)[:-9]}{random.randint(10,59)}" GIT_COMMITTER_DATE="{str(dt)[:-9]}{random.randint(10,59)}" git commit -a -m "update"')
 
 
 
