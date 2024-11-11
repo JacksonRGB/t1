@@ -18,7 +18,7 @@ def do(dt):
 
 
 while start < end - datetime.timedelta(days=200):
-    start = start + datetime.timedelta(days=random.randint(1, 8))
+    start = start + datetime.timedelta(days=random.randint(1, 3))
     do(start)
 
 
