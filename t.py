@@ -4,7 +4,7 @@ import os
 import time
 
 end = datetime.datetime.now()
-start = end - datetime.timedelta(days=330)
+start = end - datetime.timedelta(days=200)
 
 def do(dt):
     if not random.randint(0, 2):
